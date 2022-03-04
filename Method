@@ -1,0 +1,40 @@
+package academy.learnprogramming;
+
+    public class Main {
+
+        public static void main(String[] args) {
+
+            int playerscore=calculateHighScorePosition(1500);
+            displayHighScorePosition("Jeenu",playerscore);
+
+            playerscore=calculateHighScorePosition(900);
+            displayHighScorePosition("Tim",playerscore);
+
+            playerscore=calculateHighScorePosition(400);
+            displayHighScorePosition("Joy",playerscore);
+
+            playerscore=calculateHighScorePosition(50);
+            displayHighScorePosition("Sej",playerscore);
+
+        }
+
+        public static void displayHighScorePosition(String name,int postion){
+            System.out.println(name +" managed to get into the positon "+ postion+ " on the high score table");
+
+        }
+
+        public static int calculateHighScorePosition(int score){
+            if(score>1000){
+                return 1;
+            }else if(score>500 && score<1000){
+                return 2;
+            }else if(score>100 && score<500) {
+                return 3;
+            }else{
+                return 4;
+            }
+          
+
+        }
+
+    }
